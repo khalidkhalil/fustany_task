@@ -1,24 +1,24 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+#To Start application after git clone
 
-* Ruby version
+* rake db:create
+* rake db:migrate
+* rake db:seed
 
-* System dependencies
+the account to start login 
+email: khalidkhalil1993@outlook.com
+password: fustany
 
-* Configuration
+# Content
+* products 
+* categories
+* wish list for each user
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
 
-* ...
+
