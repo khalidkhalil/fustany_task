@@ -44,6 +44,10 @@
                 <%= link_to('Categories', categories_path) %>
               </li>
 
+               <li class="<%= active_class(wishlists_path) %>">
+                <%= link_to('Wish List', wishlists_path) %>
+              </li>
+
           <li class="<%= active_class(edit_user_registration_path) %>">
                 <%= link_to('Edit registration', edit_user_registration_path) %>
               </li>

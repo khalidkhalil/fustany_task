@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :wishlists
   resources :products
   resources :categories
   devise_for :users
@@ -6,5 +7,6 @@ Rails.application.routes.draw do
 
   # get 'profile', to: 'users#show'
   root to: 'home#welcome'
+  get '/add_wish_list/:id', :to => 'products#add_wish_list' , as: :add_wish_list
 
 end

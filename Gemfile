@@ -18,11 +18,14 @@ gem 'uglifier', '>= 1.3.0'
 group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda'
+  gem 'factory_bot'
 end
 
 group :production do
   gem 'pg'
 end
+
+gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 
 
 gem 'devise'

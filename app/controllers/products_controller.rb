@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :set_product, only: [:show, :edit, :update, :destroy]
+  before_action :set_product, only: [:show, :edit, :update, :destroy,:add_wish_list]
   before_action :authenticate_user!
 
   # GET /products
@@ -36,6 +36,16 @@ class ProductsController < ApplicationController
         format.json { render json: @product.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def add_wish_list
+
+    @wishlist = Wishlist.new
+    @wishlist.product_id = @product.id
+    @wishlist.user_id = current_user.id
+    @wishlist.save
+    redirect_back(fallback_location: root_path , notice: 'Product was successfully added to wishlist.')
+
   end
 
   # PATCH/PUT /products/1
